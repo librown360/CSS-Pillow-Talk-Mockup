@@ -1,3 +1,89 @@
+* {
+  border: 1px solid teal;
+}
 body {
-  background: papayawhip;
+  background: lightgray;
+}
+/**********************************
+  first container class style
+***********************************/
+.container-a {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  min-height: 100vh;
+}
+/***************************************************
+  style for header & footer
+****************************************************/
+header, footer {
+  flex-grow: 1;
+  min-height: 10vh;
+}
+/***************************************************
+  style for main
+****************************************************/
+main {
+  flex-grow: 3;
+}
+/***************************************************
+  style for aside
+****************************************************/
+aside {
+  border: none;
+}
+/***************************************************
+  style for aside elements (paragraphs)
+****************************************************/
+aside > div {
+  display: inline-block;
+  width: 32.222%;
+  min-height: 10vh;
+}
+/***************************************************
+  style for header, footer, and main
+****************************************************/
+header, footer, main {
+  width: 96%;
+}
+/**********************************************
+  style for all items in container
+***********************************************/
+header, main, aside, footer {
+  background-color: silver; 
+  margin: .5em;
+  text-align: center;
+  align-content: center;
+}
+/**********************************
+  second container class style
+***********************************/
+.container-b {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  min-height: 100vh;
+}
+/**********************************
+  media query
+***********************************/
+@media (min-width: 600px) {
+  .container-a {
+    flex-flow: row wrap;
+    /* align-content: stretch; */
+  }
+  header {
+    width: 98%;
+    max-height: 10vh;
+  }
+  .container-b {
+    flex-basis: 70%;
+    justify-content: stretch;
+    min-height: 80vh;
+  }
+  footer {
+    min-height: 80vh;
+    max-width: 25%;
+    padding: .5em;
+  }
 }
